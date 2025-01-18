@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Calculatrice Web</title>
+</head>
+<body>
+    <h1>Calculatrice Web</h1>
+    <form method="POST">
+        Nombre 1: <input type="number" name="nombre1" required><br>
+        Nombre 2: <input type="number" name="nombre2"><br> <br>
+        Opération:
+        <select name="operation">
+            <option value="addition">Addition (+)</option>
+            <option value="soustraction">Soustraction (-)</option>
+            <option value="multiplication">Multiplication (*)</option>
+            <option value="division">Division (/)</option>
+            <option value="carre">Carré</option>
+            <option value="racine">Racine Carrée</option>
+            <option value="puissance">Puissance</option>
+        </select><br><br>
+        <input type="submit" value="Calculer">
+    </form>
+
+    {% if resultat is not none %}
+        <p>Résultat: {{ resultat }}</p>
+    {% endif %}
+</body>
+</html>
