@@ -63,19 +63,4 @@ jobs:
 
       - name: Unzip artifact for deployment
         run: unzip release.zip
-
-      
-      - name: Login to Azure
-        uses: azure/login@v2
-        with:
-          client-id: ${{ secrets.AZUREAPPSERVICE_CLIENTID_E0DF073C14E84CAB9CB79ECEEC27B2E4 }}
-          tenant-id: ${{ secrets.AZUREAPPSERVICE_TENANTID_57D3913F937F4E87997529FDA3246A74 }}
-          subscription-id: ${{ secrets.AZUREAPPSERVICE_SUBSCRIPTIONID_A609E0F65BE64AA7B569E5B7C7E88825 }}
-
-      - name: 'Deploy to Azure Web App'
-        uses: azure/webapps-deploy@v3
-        id: deploy-to-webapp
-        with:
-          app-name: 'monsite'
-          slot-name: 'Production'
           
