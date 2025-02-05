@@ -1,0 +1,44 @@
+body {
+    font-family: sans-serif; /* Police sans serif */
+    background-color: #f0f0f0; /* Fond légèrement gris */
+}
+
+h1 {
+    color: #333; /* Titre gris foncé */
+    text-align: center; /* Centrer le texte */
+    margin-bottom: 20px; /* Marge en bas */
+}
+
+form {
+    width: 300px; /* Largeur fixe du formulaire */
+    margin: 0 auto; /* Centrer le formulaire */
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px; /* Bords arrondis */
+    background-color: white;
+}
+
+label, select, input[type="number"], input[type="submit"] {
+    display: block; /* Mettre chaque élément sur une nouvelle ligne */
+    margin-bottom: 10px;
+    width: 100%;
+    box-sizing: border-box; /* Inclure le padding et la bordure dans la largeur */
+}
+
+input[type="submit"]{
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.resultat {
+    margin-top: 20px;
+    text-align: center;
+    font-weight: bold;
+}

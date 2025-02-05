@@ -9,7 +9,7 @@ def index():
     if request.method == "POST":
         try:
             nombre1 = float(request.form["nombre1"])
-            nombre2 = float(request.form["nombre2"])
+            nombre2 = float(request.form.get("nombre2", 1))  # Utilisation de get avec une valeur par défaut
             operation = request.form["operation"]
 
             if operation == "addition":
@@ -32,6 +32,11 @@ def index():
                     resultat = math.sqrt(nombre1)
             elif operation == "puissance":
                 resultat = nombre1 ** nombre2
+            elif operation == "inverse":
+                if nombre1 == 0:
+                    resultat = "Inverse de zéro impossible"
+                else:
+                    resultat = 1 / nombre1
         except ValueError:
             resultat = "Entrée invalide"
 
